@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #050506 0%, #42729e 100%);
     min-height: 100vh;
     color: #333;
 }
@@ -40,7 +40,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #667eea;
+    color: #000000;
     padding: 1rem;
     border-radius: 8px;
     font-weight: 500;
@@ -49,7 +49,7 @@ nav a {
 }
 
 nav a:hover {
-    background: #667eea;
+    background: #cf7018;
     color: white;
     transform: translateX(5px);
 }
@@ -62,7 +62,6 @@ nav a:hover {
     border-radius: 8px;
     font-size: 0.9rem;
     color: #666;
-    border-left: 3px solid #667eea;
 }
 
 /* Contenido principal */
@@ -83,7 +82,7 @@ nav a:hover {
 
 /* Sección de términos */
 .informacion-terminos h3 {
-    color: #667eea;
+    color: #272ee7;
     margin: 1.5rem 0 0.5rem;
     font-size: 1.3rem;
 }
@@ -97,7 +96,6 @@ nav a:hover {
     line-height: 1.6;
     margin-bottom: 1.5rem;
     padding-left: 1rem;
-    border-left: 3px solid #764ba2;
 }
 
 /* Sección de videos */
@@ -114,7 +112,7 @@ nav a:hover {
     align-items: center;
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #d91a10 0%, #9ba24b 100%);
     color: white;
     text-decoration: none;
     border-radius: 50%;
@@ -132,7 +130,7 @@ nav a:hover {
 /* Sección de evaluación */
 .info-examen {
     font-size: 1.5rem;
-    color: #667eea;
+    color: #272ee7;
     margin-bottom: 2rem;
     font-weight: 600;
     text-align: center;
@@ -157,7 +155,7 @@ input[type="radio"] {
     -webkit-appearance: none;
     width: 18px;
     height: 18px;
-    border: 2px solid #667eea;
+    border: 2px solid #c5bbb7;
     border-radius: 50%;
     margin: 0 8px 0 15px;
     position: relative;
