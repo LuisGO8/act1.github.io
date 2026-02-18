@@ -175,6 +175,112 @@ input[type="radio"]:hover {
     border-color: #764ba2;
 }
 
+/* Sección de Realidad Aumentada */
+.realidad-aumentada {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.realidad-aumentada h2 {
+    color: #272ee7;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* Contenedor AR */
+.realidad-aumentada a-scene {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    background: #f0f0f0;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Ajustes para el marcador AR */
+.realidad-aumentada a-marker {
+    width: 100%;
+    height: 100%;
+}
+
+/* Instrucciones opcionales (puedes añadirlas al HTML) */
+.realidad-aumentada::before {
+    content: "Apunta tu cámara al marcador HIRO para ver la pirámide";
+    display: block;
+    background: #667eea;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Media queries para responsive */
+@media screen and (max-width: 768px) {
+    .realidad-aumentada {
+        padding: 1.5rem;
+    }
+    
+    .realidad-aumentada h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .realidad-aumentada a-scene {
+        height: 350px;
+    }
+    
+    .realidad-aumentada::before {
+        font-size: 0.85rem;
+        padding: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .realidad-aumentada {
+        padding: 1rem;
+    }
+    
+    .realidad-aumentada h2 {
+        font-size: 1.2rem;
+    }
+    
+    .realidad-aumentada a-scene {
+        height: 300px;
+    }
+    
+    .realidad-aumentada::before {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Animación suave al cargar la escena AR */
+@keyframes fadeInAR {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.realidad-aumentada {
+    animation: fadeInAR 0.8s ease-out;
+}
+
+
+
 /* Media queries para responsive */
 @media screen and (max-width: 768px) {
     /* Navegación inferior en móvil */
