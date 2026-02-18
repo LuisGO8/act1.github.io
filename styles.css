@@ -110,21 +110,21 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 80px;
+    width: 250px;
+    height: 250px;
     background: linear-gradient(135deg, #d91a10 0%, #9ba24b 100%);
     color: white;
     text-decoration: none;
-    border-radius: 50%;
-    font-size: 2rem;
+    border-radius: 10%;
+    font-size: 1.5rem;
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 15px rgba(221, 234, 102, 0.4);
 }
 
 .video-enlace a:hover {
     transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+    box-shadow: 0 8px 25px rgba(194, 234, 102, 0.6);
 }
 
 /* Sección de evaluación */
@@ -225,10 +225,16 @@ input[type="radio"]:hover {
         font-size: 0.95rem;
     }
 
+    .videos{
+        display: none;
+    }
+
+    .informacion-videos{
+        display: none;
+    }
+
     .video-enlace a {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
+        display: none;
     }
 
     /* Ajuste de las preguntas en móvil */
