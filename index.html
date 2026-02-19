@@ -162,43 +162,47 @@
 
         <div class="evaluacion" id="evaluacion">
             <div class="info-examen">
-                Evalua los conocimientos adquiridos:
+                Evalúa los conocimientos adquiridos:
             </div>
+
             <div class="preguntas">
                 <div class="pregunta-1">
-                    Pregunta 1
-                    a.- dfafdafdsa <input type="radio" id="1-a" name="p1">
-                    b.- dfafdafdsa <input type="radio" id="1-b" name="p1">
-                    c.- dfafdafdsa <input type="radio" id="1-c" name="p1">
+                    <p>Pregunta 1. ¿Cuál de las siguientes es una necesidad primaria o básica?</p>
+                    <input type="radio" name="p1" value="a"> a.- Tener redes sociales activas <br>
+                    <input type="radio" name="p1" value="b"> b.- Dormir y alimentarse adecuadamente <br>
+                    <input type="radio" name="p1" value="c"> c.- Comprar el último modelo de celular <br>
                 </div>
                 <div class="pregunta-2">
-                    Pregunta 2
-                    a.- dfafdafdsa <input type="radio" id="2-a" name="p2">
-                    b.- dfafdafdsa <input type="radio" id="2-b" name="p2">
-                    c.- dfafdafdsa <input type="radio" id="2-c" name="p2">
+                    <p>Pregunta 2. Según su naturaleza física, un satisfactor puede clasificarse como:</p>
+                    <input type="radio" name="p2" value="a"> a.- Individual o colectivo <br>
+                    <input type="radio" name="p2" value="b"> b.- Bien o servicio <br>
+                    <input type="radio" name="p2" value="c"> c.- Primario o secundario <br>
                 </div>
                 <div class="pregunta-3">
-                    Pregunta 3
-                    a.- dfafdafdsa <input type="radio" id="3-a" name="p3">
-                    b.- dfafdafdsa <input type="radio" id="3-b" name="p3">
-                    c.- dfafdafdsa <input type="radio" id="3-c" name="p3">
+                    <p>Pregunta 3. Según Abraham Maslow, las necesidades fisiológicas se caracterizan por:</p>
+                    <input type="radio" name="p3" value="a"> a.- Estar relacionadas con el prestigio social <br>
+                    <input type="radio" name="p3" value="b"> b.- Ser esenciales para la supervivencia humana <br>
+                    <input type="radio" name="p3" value="c"> c.- Enfocarse en la autorrealización personal <br>
                 </div>
                 <div class="pregunta-4">
-                    Pregunta 4
-                    a.- dfafdafdsa <input type="radio" id="4-a" name="p4">
-                    b.- dfafdafdsa <input type="radio" id="4-b" name="p4">
-                    c.- dfafdafdsa <input type="radio" id="4-c" name="p4">
+                    <p>Pregunta 4. ¿Qué es el costo de oportunidad?</p>
+                    <input type="radio" name="p4" value="a"> a.- El dinero que se paga por un producto o servicio <br>
+                    <input type="radio" name="p4" value="b"> b.- El beneficio adicional que se obtiene al elegir una
+                    opción <br>
+                    <input type="radio" name="p4" value="c"> c.- El beneficio al que se renuncia al elegir una
+                    alternativa sobre otra <br>
                 </div>
                 <div class="pregunta-5">
-                    Pregunta 5
-                    a.- dfafdafdsa <input type="radio" id="5-a" name="p5">
-                    b.- dfafdafdsa <input type="radio" id="5-b" name="p5">
-                    c.- dfafdafdsa <input type="radio" id="5-c" name="p5">
+                    <p>Pregunta 5. ¿Cuál es una característica de las necesidades humanas?</p>
+                    <input type="radio" name="p5" value="a"> a.- Son limitadas y se satisfacen completamente <br>
+                    <input type="radio" name="p5" value="b"> b.- Son ilimitadas y recurrentes <br>
+                    <input type="radio" name="p5" value="c"> c.- Son iguales en todas las culturas y épocas <br>
                 </div>
+                <br>
+                <button onclick="evaluar()">Calificar</button>
+                <p><strong>Resultado:</strong> <span id="resultado"></span></p>
             </div>
         </div>
-
-
 
     </div>
     <script src="script.js"></script>
