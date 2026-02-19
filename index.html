@@ -140,6 +140,82 @@
             </div>
         </div>
 
+        <div class="flujo-circular" id="flujo">
+            <div class="info-flujo">
+                <h2>Flujo Circular de la Economía</h2>
+                <p>
+                    Es un modelo gráfico que explica el funcionamiento básico de la actividad económica, mostrando cómo
+                    circula el dinero, los bienes, los servicios y los factores productivos (trabajo, capital) entre los
+                    agentes económicos: hogares, empresas, gobierno y sector exterior
+                </p>
+            </div>
+            <!-- Panel de descripción mejorado -->
+            <div class="modelo-descripcion">
+                <div class="descripcion-header">
+                    <span class="modelo-titulo">MODELO DE FLUJO CIRCULAR</span>
+                    <span class="modelo-version">Interactivo</span>
+                </div>
+
+                <div class="descripcion-contenido">
+                    <div class="descripcion-texto" id="descripcionActiva">
+                        <p>Este modelo representa las relaciones económicas básicas entre <strong>Familias</strong> y
+                            <strong>Empresas</strong>.
+                        </p>
+                        <p>• <span class="resaltado-flujo real">Flujo Real (azul)</span>: Bienes/servicios y factores
+                            productivos</p>
+                        <p>• <span class="resaltado-flujo monetario">Flujo Monetario (verde/morado)</span>: Pagos y
+                            remuneraciones</p>
+                    </div>
+
+                    <div class="stats-flujo" id="statsFlujo">
+                        <div class="stat-item">
+                            <span class="stat-label">Consumo:</span>
+                            <span class="stat-value" id="statConsumo">100%</span>
+                            <div class="stat-bar" id="barConsumo" style="width: 100%"></div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Inversión:</span>
+                            <span class="stat-value" id="statInversion">100%</span>
+                            <div class="stat-bar" id="barInversion" style="width: 100%"></div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Salarios:</span>
+                            <span class="stat-value" id="statSalarios">100%</span>
+                            <div class="stat-bar" id="barSalarios" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tooltip interactivo -->
+            <div class="tooltip-economico" id="tooltipEconomico">
+                <div class="tooltip-titulo" id="tooltipTitulo">Bienvenido</div>
+                <div class="tooltip-cuerpo" id="tooltipCuerpo">Ajusta los sliders para ver cómo cambian los flujos
+                    económicos</div>
+            </div>
+
+            <canvas id="canvasFlujo" width="700" height="400"></canvas>
+
+            <div class="panel-control">
+                <div class="param-sliders">
+                    <div class="slider-item">
+                        <label><span style="font-size:1.3rem;"></span> Gasto familias (consumo)</label>
+                        <input type="range" id="sliderFam" min="0.2" max="1.8" value="1.0" step="0.01">
+                    </div>
+                    <div class="slider-item">
+                        <label><span style="font-size:1.3rem;"></span> Inversión empresas</label>
+                        <input type="range" id="sliderEmp" min="0.2" max="1.8" value="1.0" step="0.01">
+                    </div>
+                    <div class="slider-item">
+                        <label><span style="font-size:1.3rem;"></span> Salarios / Renta</label>
+                        <input type="range" id="sliderSal" min="0.2" max="1.8" value="1.0" step="0.01">
+                    </div>
+                    <button class="reset-btn" id="resetParams">↺ Restablecer</button>
+                </div>
+            </div>
+        </div>
+
+
         <div class="videos" id="videos">
             <div class="informacion-videos">
                 <div class="video-enlace">
