@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #050506 0%, #42729e 100%);
+    background: linear-gradient(135deg, #060607 0%, #305c37 100%);
     min-height: 100vh;
     color: #333;
 }
@@ -40,7 +40,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #000000;
+    color: #1d6214;
     padding: 1rem;
     border-radius: 8px;
     font-weight: 500;
@@ -49,7 +49,7 @@ nav a {
 }
 
 nav a:hover {
-    background: #cf7018;
+    background: #cfa418;
     color: white;
     transform: translateX(5px);
 }
@@ -73,7 +73,7 @@ nav a:hover {
 
 /* Secciones */
 [class*="terminos"], [class*="videos"], [class*="evaluacion"] {
-    background: white;
+    background: rgb(242, 245, 240);
     border-radius: 15px;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -82,7 +82,7 @@ nav a:hover {
 
 /* Sección de términos */
 .informacion-terminos h3 {
-    color: #272ee7;
+    color: #1a9e0e;
     margin: 1.5rem 0 0.5rem;
     font-size: 1.3rem;
 }
@@ -108,29 +108,41 @@ nav a:hover {
 
 .video-enlace a {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 250px;
-    height: 250px;
-    background: linear-gradient(135deg, #d91a10 0%, #9ba24b 100%);
+    height: 280px;
+    background: linear-gradient(135deg, #eef6ed 0%, #969d50 100%);
     color: white;
     text-decoration: none;
     border-radius: 10%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(221, 234, 102, 0.4);
+    box-shadow: 0 5px 15px rgba(242, 245, 240);
+    padding: 1rem;
+    text-align: center;
+    gap: 1rem;
+}
+
+.video-enlace a img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid white;
 }
 
 .video-enlace a:hover {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.05) rotate(2deg);
     box-shadow: 0 8px 25px rgba(194, 234, 102, 0.6);
 }
 
 /* Sección de evaluación */
 .info-examen {
     font-size: 1.5rem;
-    color: #272ee7;
+    color: #1d6214;
     margin-bottom: 2rem;
     font-weight: 600;
     text-align: center;
@@ -165,14 +177,14 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-    background: #667eea;
-    border-color: #667eea;
+    background: #4990ae;
+    border-color: #4990ae;
     box-shadow: inset 0 0 0 4px white;
 }
 
 input[type="radio"]:hover {
     transform: scale(1.2);
-    border-color: #764ba2;
+    border-color: #cfa418;
 }
 
 /* Media queries para responsive */
@@ -190,24 +202,33 @@ input[type="radio"]:hover {
         justify-content: space-around;
         padding: 0.5rem;
         background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
         transform: translateY(0);
+        z-index: 1000;
     }
 
-    nav a {
+    /* Ocultar el enlace de Videos en móvil */
+    nav a[href="#videos"] {
+        display: none;
+    }
+
+    /* Ajustar los otros enlaces para ocupar el espacio */
+    nav a:not([href="#videos"]) {
         padding: 0.5rem;
         font-size: 0.9rem;
         flex: 1;
         text-align: center;
+        margin: 0 2px;
     }
 
     .info-desarrolladores {
-        display: none; /* Ocultar en móvil para no saturar */
+        display: none;
     }
 
     /* Ajuste del contenido principal en móvil */
     .main {
         margin-left: 0;
-        margin-bottom: 70px; /* Espacio para la navegación inferior */
+        margin-bottom: 60px;
         padding: 1rem;
     }
 
@@ -225,16 +246,26 @@ input[type="radio"]:hover {
         font-size: 0.95rem;
     }
 
+    /* Ajustes para la sección de videos en móvil */
+    .informacion-videos {
+        gap: 1rem;
+    }
+
     .videos{
         display: none;
     }
 
-    .informacion-videos{
-        display: none;
+    .video-enlace a {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        min-height: 260px;
+        padding: 1.5rem;
     }
 
-    .video-enlace a {
-        display: none;
+    .video-enlace a img {
+        width: 120px;
+        height: 120px;
     }
 
     /* Ajuste de las preguntas en móvil */
@@ -259,10 +290,9 @@ input[type="radio"]:hover {
     }
 
     .pregunta-1 br, .pregunta-2 br, .pregunta-3 br, .pregunta-4 br, .pregunta-5 br {
-        display: none; /* Ocultar los br para mejor espaciado */
+        display: none;
     }
 
-    /* Añadir algo de espacio entre opciones */
     .pregunta-1 a, .pregunta-2 a, .pregunta-3 a, .pregunta-4 a, .pregunta-5 a {
         margin-right: 5px;
     }
@@ -270,8 +300,8 @@ input[type="radio"]:hover {
 
 /* Ajuste para pantallas muy pequeñas */
 @media screen and (max-width: 480px) {
-    nav a {
-        font-size: 0.8rem;
+    nav a:not([href="#videos"]) {
+        font-size: 0.75rem;
         padding: 0.4rem;
     }
 
@@ -286,6 +316,34 @@ input[type="radio"]:hover {
     .info-examen {
         font-size: 1.2rem;
     }
+
+    .videos{
+        display: none;
+    }
+
+    .video-enlace a {
+        max-width: 240px;
+        min-height: 240px;
+    }
+
+    .video-enlace a img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Ajuste para tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .video-enlace a {
+        width: 200px;
+        height: 230px;
+        font-size: 1rem;
+    }
+
+    .video-enlace a img {
+        width: 120px;
+        height: 120px;
+    }
 }
 
 /* Animaciones suaves */
@@ -298,5 +356,5 @@ html {
     transform: translateX(5px);
     transition: transform 0.3s ease;
     background: #ffffff;
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+    box-shadow: 0 5px 15px rgba(39, 46, 231, 0.1);
 }
