@@ -600,6 +600,15 @@ button:hover {
         margin: 0 2px;
     }
 
+    .realidad-aumentada {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .realidad-aumentada h3 {
+        margin-left: 0;
+    }
+
     .info-desarrolladores {
         display: none;
     }
@@ -710,6 +719,15 @@ button:hover {
         margin-left: 250px;
         padding: 1.5rem;
         width: calc(100% - 250px);
+    }
+
+    .realidad-aumentada {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .realidad-aumentada h3 {
+        margin-left: 0;
     }
 
     .video-enlace a {
